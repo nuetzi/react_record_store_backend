@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 
 const recordSchema = new mongoose.Schema({
-    title: String,
-    artist: String,
-    year: String,
-    genre: String,
-    image: String
+    title: {type: String, required: true},
+    artist: {type: String, required: true},
+    year: {type: Number, required: true},
+    genre: {type: String, required: true},
+    image: {type: String, required: true}
 });
 
 const Records = mongoose.model("Record", recordSchema);
